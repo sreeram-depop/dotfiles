@@ -7,5 +7,8 @@ DOTFILES="$DEV_ENV/dotfiles"
 [ -f "$DOTFILES/aliases" ] && source "$DOTFILES/aliases"
 [ -f "$DOTFILES/prompt.sh" ] && source "$DOTFILES/prompt.sh"
 
+# Ensure semantic-branch script is executable (e.g. after fresh clone)
+[ -f "$DOTFILES/semantic-branch.sh" ] && chmod +x "$DOTFILES/semantic-branch.sh"
+
 # Global gitignore
 [ -f "$DOTFILES/gitignore_global" ] && git config --global core.excludesfile "$DOTFILES/gitignore_global"
